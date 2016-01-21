@@ -1,0 +1,3 @@
+[submodule "BotKit"]
+	path = Submodules/BotKit
+	url = git@github.com:utahiosmac/botkit.git

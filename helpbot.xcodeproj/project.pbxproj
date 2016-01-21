@@ -11,6 +11,8 @@
 		555E0E4F1C509CB100E6BB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555E0E4E1C509CB100E6BB92 /* Assets.xcassets */; };
 		555E0E521C509CB100E6BB92 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555E0E501C509CB100E6BB92 /* MainMenu.xib */; };
 		555E0E5D1C509CB100E6BB92 /* helpbotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E0E5C1C509CB100E6BB92 /* helpbotTests.swift */; };
+		555E0E8C1C509D2600E6BB92 /* botkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555E0E8B1C509D2600E6BB92 /* botkit.framework */; };
+		555E0E8E1C509D3800E6BB92 /* botkit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 555E0E8B1C509D2600E6BB92 /* botkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		555E0E8D1C509D2D00E6BB92 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				555E0E8E1C509D3800E6BB92 /* botkit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		555E0E491C509CB100E6BB92 /* helpbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helpbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +48,7 @@
 		555E0E581C509CB100E6BB92 /* helpbotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helpbotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		555E0E5C1C509CB100E6BB92 /* helpbotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpbotTests.swift; sourceTree = "<group>"; };
 		555E0E5E1C509CB100E6BB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555E0E8B1C509D2600E6BB92 /* botkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = botkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555E0E8C1C509D2600E6BB92 /* botkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +73,7 @@
 		555E0E401C509CB000E6BB92 = {
 			isa = PBXGroup;
 			children = (
+				555E0E8B1C509D2600E6BB92 /* botkit.framework */,
 				555E0E4B1C509CB100E6BB92 /* helpbot */,
 				555E0E5B1C509CB100E6BB92 /* helpbotTests */,
 				555E0E4A1C509CB100E6BB92 /* Products */,
@@ -100,6 +119,7 @@
 				555E0E451C509CB000E6BB92 /* Sources */,
 				555E0E461C509CB000E6BB92 /* Frameworks */,
 				555E0E471C509CB000E6BB92 /* Resources */,
+				555E0E8D1C509D2D00E6BB92 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,6 +393,7 @@
 				555E0E631C509CB100E6BB92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		555E0E641C509CB100E6BB92 /* Build configuration list for PBXNativeTarget "helpbotTests" */ = {
 			isa = XCConfigurationList;
@@ -381,6 +402,7 @@
 				555E0E661C509CB100E6BB92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
