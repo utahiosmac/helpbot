@@ -25,7 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         do {
             let authToken = try String(contentsOf: authTokenFile)
-            bot = Bot(authorizationToken: authToken)
+            let trimmed = authToken.trimmingCharacters(in: .whitespacesAndNewlines)
+            bot = Bot(authorizationToken: trimmed)
         } catch let e {
             fatalError("Unable to read auth token from authToken.txt resource: \(e)")
         }
