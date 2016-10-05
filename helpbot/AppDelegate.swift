@@ -19,7 +19,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        bot = Bot(authorizationToken: "xoxb-3739968338-uZHXmix0jQm2jq2KOMHyFIEa")
+        guard let authTokenFile = Bundle.main.url(forResource: "authToken", withExtension: "txt") else {
+            fatalError("Unable to find authToken.txt resource")
+        }
+        
+        do {
+            let authToken = try String(contentsOf: authTokenFile)
+            bot = Bot(authorizationToken: authToken)
+        } catch let e {
+            fatalError("Unable to read auth token from authToken.txt resource: \(e)")
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

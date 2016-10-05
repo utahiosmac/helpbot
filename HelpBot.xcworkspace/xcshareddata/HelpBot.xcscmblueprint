@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6136A73A8D60D5E09FBA1E3B2D0CA09CA5D1997B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6136A73A8D60D5E09FBA1E3B2D0CA09CA5D1997B" : 0,
+    "ABB939127996C66F7E852A780552ADEEF03C6B13" : 0,
+    "D69339147D8324715B4F5FDA1E29F4524399AD0A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "407732A3-C6B8-4666-8943-00ECEAD1CDF9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6136A73A8D60D5E09FBA1E3B2D0CA09CA5D1997B" : "helpbot\/",
+    "ABB939127996C66F7E852A780552ADEEF03C6B13" : "helpbot\/Submodules\/BotKit\/Submodules\/SocketRocket\/",
+    "D69339147D8324715B4F5FDA1E29F4524399AD0A" : "helpbot\/Submodules\/BotKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HelpBot",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HelpBot.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:utahiosmac\/helpbot.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6136A73A8D60D5E09FBA1E3B2D0CA09CA5D1997B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:utahiosmac\/SocketRocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ABB939127996C66F7E852A780552ADEEF03C6B13"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:utahiosmac\/botkit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D69339147D8324715B4F5FDA1E29F4524399AD0A"
+    }
+  ]
+}
