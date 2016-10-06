@@ -5,6 +5,9 @@
       location = "group:Submodules/BotKit/Submodules/SocketRocket/SocketRocket.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Submodules/BotKit/Submodules/Jobs/Jobs.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Submodules/BotKit/botkit.xcodeproj">
    </FileRef>
    <FileRef
