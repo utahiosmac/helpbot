@@ -55,9 +55,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         bot?.on { (e: Startup, b: Bot) in
-            b.execute(action: Emoji.List(), completion: { r in
-                print("result: \(r)")
-            })
+            b.execute(action: Team.Info()) { r in
+                b.team = r.value
+            }
+            b.execute(action: User.MyInfo()) { r in
+                b.me = r.value
+            }
+            
+            b.execute(action: User.List()) { r in
+                let users = r.value ?? []
+                b.usersByID = users.keyedBy { $0.identifier }
+            }
+        }
+        
+        bot?.on { (e: Channel.MessagePosted, b: Bot) in
+            guard let me = b.me else { return }
+            guard let fullUser = b.usersByID?[e.message.user.identifier] else { return }
+            
+            let search = "<@\(me.identifier.value)"
+            if e.message.text.contains(search) {
+                let response = "Hello, @\(fullUser.name!)!"
+                let action = Channel.PostMessage(channel: e.message.channel, message: response)
+                b.execute(action: action) { r in
+                    print("sent: \(r)")
+                }
+            }
         }
     }
 
