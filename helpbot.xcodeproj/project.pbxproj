@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550F900F1DB2745000A4A3F8 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550F900E1DB2745000A4A3F8 /* Regex.swift */; };
+		550F90111DB2817400A4A3F8 /* RequestWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550F90101DB2817400A4A3F8 /* RequestWelcome.swift */; };
 		551680351DA56233005832C1 /* authToken.txt in Resources */ = {isa = PBXBuildFile; fileRef = 551680341DA56233005832C1 /* authToken.txt */; };
+		55281F451DB0906500E8E626 /* ChannelMemberCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55281F441DB0906500E8E626 /* ChannelMemberCache.swift */; };
+		55281F471DB13B0100E8E626 /* BotVerbResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55281F461DB13B0100E8E626 /* BotVerbResponse.swift */; };
 		555E0E4D1C509CB100E6BB92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */; };
 		555E0E4F1C509CB100E6BB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555E0E4E1C509CB100E6BB92 /* Assets.xcassets */; };
 		555E0E521C509CB100E6BB92 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555E0E501C509CB100E6BB92 /* MainMenu.xib */; };
@@ -41,7 +45,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		550F900E1DB2745000A4A3F8 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		550F90101DB2817400A4A3F8 /* RequestWelcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestWelcome.swift; sourceTree = "<group>"; };
 		551680341DA56233005832C1 /* authToken.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = authToken.txt; sourceTree = "<group>"; };
+		55281F441DB0906500E8E626 /* ChannelMemberCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelMemberCache.swift; sourceTree = "<group>"; };
+		55281F461DB13B0100E8E626 /* BotVerbResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotVerbResponse.swift; sourceTree = "<group>"; };
 		555E0E491C509CB100E6BB92 /* helpbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helpbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555E0E4E1C509CB100E6BB92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */,
+				55281F441DB0906500E8E626 /* ChannelMemberCache.swift */,
+				550F90101DB2817400A4A3F8 /* RequestWelcome.swift */,
+				55281F461DB13B0100E8E626 /* BotVerbResponse.swift */,
+				550F900E1DB2745000A4A3F8 /* Regex.swift */,
 				555E0E4E1C509CB100E6BB92 /* Assets.xcassets */,
 				555E0E501C509CB100E6BB92 /* MainMenu.xib */,
 				551680341DA56233005832C1 /* authToken.txt */,
@@ -216,6 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55281F451DB0906500E8E626 /* ChannelMemberCache.swift in Sources */,
+				550F900F1DB2745000A4A3F8 /* Regex.swift in Sources */,
+				550F90111DB2817400A4A3F8 /* RequestWelcome.swift in Sources */,
+				55281F471DB13B0100E8E626 /* BotVerbResponse.swift in Sources */,
 				555E0E4D1C509CB100E6BB92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
