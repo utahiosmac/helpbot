@@ -47,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             b.report("I just reconnected", in: "#help-status")
         }
         
+        setUpCommands(bot: bot)
         setUpMemberCache(bot: bot)
         setUpSnark(bot: bot)
         
@@ -56,26 +57,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             b.post(msg, in: "#lobby")
         }
         
-        bot.on("welcome new members to the team") { (e: RequestWelcome, b: Bot) in
-            guard let welcomeURL = URL(string: "https://raw.githubusercontent.com/utahiosmac/documents/master/Welcome.txt") else { return }
-            guard let welcomeText = try? String(contentsOf: welcomeURL) else { return }
-            
-            e.userIDs.forEach { uID in
-                let name = b.name(for: uID)
-                b.send("Hello, @\(name)!", to: uID) { _ in
-                    b.send(welcomeText, to: uID) { _ in
-                        b.report("@\(name) has been welcomed to the team", in: "#admins")
-                    }
-                }
-            }
-        }
-        
         bot.on("ask to be added to newly created channels") { (e: Channel.Created, b: Bot) in
             let name = b.name(for: e.channel)
             
             let message = "Hey, I see you just created #\(name). If you'd like me in there, please `/invite @help`. Thanks!"
             b.send(message, to: e.user) { _ in }
             b.report("new channel: #\(name)", in: "#admins")
+        }
+        
+        bot.on { (e: Channel.Renamed, b: Bot) in
+            let name = b.name(for: e.channel)
+            b.report("channel renamed to #\(name)", in: "#help-status")
         }
         
         self.bot = bot
@@ -163,9 +155,33 @@ extension AppDelegate {
                 case 13..<15: b.react(to: m, with: "middle_finger")
                 case 15..<18: b.reply(to: m, with: "uhhhhhhh...")
                 case 18..<20: b.reply(to: m, with: "get off my lawn")
-                default: b.reply(to: m, with: "what on earth is your problem?? what do you hope to gain by mentioning me \(mentions) times in a single message?")
+                default: b.reply(to: m, with: "what do you hope to gain by mentioning me \(mentions) times in a single message?")
             }
         }
     }
     
+    func setUpCommands(bot: Bot) {
+        bot.on("show this help message") { (e: CommandEvent<HelpCommand>, b: Bot) in
+            let helps = b.ruleHelps()
+            
+            let items = helps.map { "- " + $0 }.joined(separator: "\n")
+            let message = "Here's what I can do. I... \n" + items
+            
+            b.post(message, in: e.message.channel, ephemeral: true)
+        }
+        
+        bot.on("welcome new users to the team") { (e: CommandEvent<WelcomeCommand>, b: Bot) in
+            guard let welcomeURL = URL(string: "https://raw.githubusercontent.com/utahiosmac/documents/master/Welcome.txt") else { return }
+            guard let welcomeText = try? String(contentsOf: welcomeURL) else { return }
+            
+            e.command.users.forEach { uID in
+                let name = b.name(for: uID)
+                b.send("Hello, @\(name)!", to: uID) { _ in
+                    b.send(welcomeText, to: uID) { _ in
+                        b.report("@\(name) has been welcomed to the team", in: "#admins")
+                    }
+                }
+            }
+        }
+    }
 }

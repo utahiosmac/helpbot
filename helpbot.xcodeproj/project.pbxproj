@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		550F900F1DB2745000A4A3F8 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550F900E1DB2745000A4A3F8 /* Regex.swift */; };
 		550F90111DB2817400A4A3F8 /* RequestWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550F90101DB2817400A4A3F8 /* RequestWelcome.swift */; };
 		551680351DA56233005832C1 /* authToken.txt in Resources */ = {isa = PBXBuildFile; fileRef = 551680341DA56233005832C1 /* authToken.txt */; };
+		5526B2E11DB819B40091CE63 /* WelcomeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526B2E01DB819B40091CE63 /* WelcomeCommand.swift */; };
 		55281F451DB0906500E8E626 /* ChannelMemberCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55281F441DB0906500E8E626 /* ChannelMemberCache.swift */; };
-		55281F471DB13B0100E8E626 /* BotVerbResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55281F461DB13B0100E8E626 /* BotVerbResponse.swift */; };
 		555E0E4D1C509CB100E6BB92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */; };
 		555E0E4F1C509CB100E6BB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555E0E4E1C509CB100E6BB92 /* Assets.xcassets */; };
 		555E0E521C509CB100E6BB92 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555E0E501C509CB100E6BB92 /* MainMenu.xib */; };
 		555E0E5D1C509CB100E6BB92 /* helpbotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E0E5C1C509CB100E6BB92 /* helpbotTests.swift */; };
 		555E0E8C1C509D2600E6BB92 /* botkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555E0E8B1C509D2600E6BB92 /* botkit.framework */; };
 		555E0E8E1C509D3800E6BB92 /* botkit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 555E0E8B1C509D2600E6BB92 /* botkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		556D33CB1DB686B000C4971F /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D33CA1DB686B000C4971F /* HelpCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		550F900E1DB2745000A4A3F8 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		550F90101DB2817400A4A3F8 /* RequestWelcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestWelcome.swift; sourceTree = "<group>"; };
 		551680341DA56233005832C1 /* authToken.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = authToken.txt; sourceTree = "<group>"; };
+		5526B2E01DB819B40091CE63 /* WelcomeCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCommand.swift; sourceTree = "<group>"; };
 		55281F441DB0906500E8E626 /* ChannelMemberCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelMemberCache.swift; sourceTree = "<group>"; };
-		55281F461DB13B0100E8E626 /* BotVerbResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotVerbResponse.swift; sourceTree = "<group>"; };
 		555E0E491C509CB100E6BB92 /* helpbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helpbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555E0E4E1C509CB100E6BB92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		555E0E5C1C509CB100E6BB92 /* helpbotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpbotTests.swift; sourceTree = "<group>"; };
 		555E0E5E1C509CB100E6BB92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555E0E8B1C509D2600E6BB92 /* botkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = botkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		556D33CA1DB686B000C4971F /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,7 @@
 				555E0E4C1C509CB100E6BB92 /* AppDelegate.swift */,
 				55281F441DB0906500E8E626 /* ChannelMemberCache.swift */,
 				550F90101DB2817400A4A3F8 /* RequestWelcome.swift */,
-				55281F461DB13B0100E8E626 /* BotVerbResponse.swift */,
-				550F900E1DB2745000A4A3F8 /* Regex.swift */,
+				556D33CC1DB686B500C4971F /* Bot Commands */,
 				555E0E4E1C509CB100E6BB92 /* Assets.xcassets */,
 				555E0E501C509CB100E6BB92 /* MainMenu.xib */,
 				551680341DA56233005832C1 /* authToken.txt */,
@@ -122,6 +121,15 @@
 				555E0E5E1C509CB100E6BB92 /* Info.plist */,
 			);
 			path = helpbotTests;
+			sourceTree = "<group>";
+		};
+		556D33CC1DB686B500C4971F /* Bot Commands */ = {
+			isa = PBXGroup;
+			children = (
+				556D33CA1DB686B000C4971F /* HelpCommand.swift */,
+				5526B2E01DB819B40091CE63 /* WelcomeCommand.swift */,
+			);
+			name = "Bot Commands";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556D33CB1DB686B000C4971F /* HelpCommand.swift in Sources */,
 				55281F451DB0906500E8E626 /* ChannelMemberCache.swift in Sources */,
-				550F900F1DB2745000A4A3F8 /* Regex.swift in Sources */,
+				5526B2E11DB819B40091CE63 /* WelcomeCommand.swift in Sources */,
 				550F90111DB2817400A4A3F8 /* RequestWelcome.swift in Sources */,
-				55281F471DB13B0100E8E626 /* BotVerbResponse.swift in Sources */,
 				555E0E4D1C509CB100E6BB92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
