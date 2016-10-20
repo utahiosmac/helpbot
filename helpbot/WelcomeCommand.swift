@@ -29,6 +29,11 @@ struct WelcomeCommand: BotCommand {
             throw JSONError("Unable to understand welcome command: \(text)")
         }
         
-        users = rawIdentifiers.map { Identifier<User>($0) }
+        let uniqueIDs = rawIdentifiers.map { Identifier<User>($0) }.unique()
+        if let myID = bot.me?.identifier {
+            users = uniqueIDs.filter { $0 != myID }
+        } else {
+            users = uniqueIDs
+        }
     }
 }
