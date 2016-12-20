@@ -6,20 +6,29 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "D69339147D8324715B4F5FDA1E29F4524399AD0A" : 0,
     "6136A73A8D60D5E09FBA1E3B2D0CA09CA5D1997B" : 0,
+    "C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D" : 9223372036854775807,
+    "A9DBE2ED3B1DD6C096E2F0140D7E3E86C7F230CB" : 9223372036854775807,
     "ABB939127996C66F7E852A780552ADEEF03C6B13" : 0,
-    "A9DBE2ED3B1DD6C096E2F0140D7E3E86C7F230CB" : 9223372036854775807
+    "0DCFF0852789D5A49F67B6C8EA2636735D303748" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "407732A3-C6B8-4666-8943-00ECEAD1CDF9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "D69339147D8324715B4F5FDA1E29F4524399AD0A" : "helpbot\/Submodules\/BotKit\/",
     "6136A73A8D60D5E09FBA1E3B2D0CA09CA5D1997B" : "helpbot\/",
+    "C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D" : "helpbot\/Submodules\/BotKit\/Submodules\/Starscream\/",
+    "A9DBE2ED3B1DD6C096E2F0140D7E3E86C7F230CB" : "helpbot\/Submodules\/BotKit\/Submodules\/Jobs\/",
     "ABB939127996C66F7E852A780552ADEEF03C6B13" : "helpbot\/Submodules\/BotKit\/Submodules\/SocketRocket\/",
-    "A9DBE2ED3B1DD6C096E2F0140D7E3E86C7F230CB" : "helpbot\/Submodules\/BotKit\/Submodules\/Jobs\/"
+    "0DCFF0852789D5A49F67B6C8EA2636735D303748" : "helpbot\/Submodules\/BotKit\/Submodules\/SocketRocket\/Vendor\/xctoolchain\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "HelpBot",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HelpBot.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ParsePlatform\/xctoolchain.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0DCFF0852789D5A49F67B6C8EA2636735D303748"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:utahiosmac\/helpbot.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
@@ -34,6 +43,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:utahiosmac\/SocketRocket.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ABB939127996C66F7E852A780552ADEEF03C6B13"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:daltoniam\/Starscream.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:utahiosmac\/botkit.git",

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import botkit
+import BotKit
 
 struct HelpCommand: BotCommand {
     

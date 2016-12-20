@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import botkit
+import BotKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -57,7 +57,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             b.post(msg, in: "#lobby")
         }
         
-        bot.on("ask to be added to newly created channels") { (e: Channel.Created, b: Bot) in
+        /*
+        bot.on("ask to be added to newly created channels") { (e: Channel.CreatedPublic, b: Bot) in
             let name = b.name(for: e.channel)
             
             let message = "Hey, I see you just created #\(name). If you'd like me in there, please `/invite @help`. Thanks!"
@@ -65,10 +66,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             b.report("new channel: #\(name)", in: "#admins")
         }
         
-        bot.on { (e: Channel.Renamed, b: Bot) in
+        bot.on { (e: Channel.RenamedPublic, b: Bot) in
             let name = b.name(for: e.channel)
             b.report("channel renamed to #\(name)", in: "#help-status")
         }
+        */
         
         self.bot = bot
         self.bot?.connect()
@@ -87,7 +89,8 @@ extension AppDelegate {
         
         let channelMemberCache = ChannelMemberCache(bot: bot)
         
-        bot.on { (e: Channel.Archived, b: Bot) in
+        /*
+        bot.on { (e: Channel.ArchivedPublic, b: Bot) in
             channelMemberCache.archived(channel: e.channel, by: e.user)
             
             let name = b.name(for: e.channel)
@@ -95,7 +98,7 @@ extension AppDelegate {
             b.report("#\(name) archived by @\(user)")
         }
         
-        bot.on("invite members to re-join channels they were in when the channel was archived") { (e: Channel.Unarchived, b: Bot) in
+        bot.on("invite members to re-join channels they were in when the channel was archived") { (e: Channel.UnarchivedPublic, b: Bot) in
             let oldMembers = channelMemberCache.unarchived(channel: e.channel, by: e.user)
             
             let name = b.name(for: e.channel)
@@ -111,18 +114,31 @@ extension AppDelegate {
             }
         }
         
-        bot.on { (e: Channel.Joined, b: Bot) in
+        bot.on { (e: Channel.JoinedPublic, b: Bot) in
             channelMemberCache.joined(channel: e.channel)
             
             let name = b.name(for: e.channel)
             b.report("I just joined #\(name)")
         }
         
-        bot.on { (e: Channel.Left, b: Bot) in
+        bot.on { (e: Channel.JoinedPrivate, b: Bot) in
+            channelMemberCache.joined(channel: e.channel)
+            
+            let name = b.name(for: e.channel)
+            b.report("I just joined #\(name)")
+        }
+        
+        bot.on { (e: Channel.LeftPublic, b: Bot) in
             let name = b.name(for: e.channel)
             b.report("I just left #\(name)")
         }
         
+        bot.on { (e: Channel.LeftPrivate, b: Bot) in
+            let name = b.name(for: e.channel)
+            b.report("I just left #\(name)")
+        }
+        */
+ 
         bot.on { (e: Channel.UserJoined, b: Bot) in
             channelMemberCache.add(user: e.user, to: e.channel)
         }

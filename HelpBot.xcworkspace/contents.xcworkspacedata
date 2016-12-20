@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Submodules/BotKit/Submodules/SocketRocket/SocketRocket.xcodeproj">
+      location = "group:Submodules/BotKit/Submodules/Starscream/Starscream.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Submodules/BotKit/Submodules/Jobs/Jobs.xcodeproj">

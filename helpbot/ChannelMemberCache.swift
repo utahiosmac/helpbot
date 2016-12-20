@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import botkit
+import BotKit
 
 class ChannelMemberCache {
     private let q = DispatchQueue(label: "helpbot.ChannelMemberCache")

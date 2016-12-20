@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import botkit
+import BotKit
 
 struct WelcomeCommand: BotCommand {
     static var verb: String = "welcome"
